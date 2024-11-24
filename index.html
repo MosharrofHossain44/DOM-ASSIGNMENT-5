@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation Page</title>
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -25,8 +29,8 @@
   </nav>
 
   <main>
-     <!--toggle button  -->
-     <div class="text-center">
+    <!--toggle button  -->
+    <div class="text-center">
       <button id="donation-btn" class="bg-[#B4F461] px-6 py-2 font-bold rounded-lg sm:text-xl mr-4">
         Donation
       </button>
@@ -61,8 +65,16 @@
               lives
               of those in need.
             </p>
-            <input id="flood-donation-field" class="block border w-full p-4 mt-6 mb-4 rounded-lg" type="text" placeholder="Write Donation Amount">
-            <button id="flood-donation-btn" class="block w-full bg-[#B4F461] px-6 py-4 font-bold rounded-lg sm:text-xl ">
+            <input id="flood-donation-field" class="block border w-full p-4 mt-6 mb-4 rounded-lg" type="number"
+              placeholder="Write Donation Amount">
+            <p id="warning-1" class="text-red-600 mb-4 hidden">
+              invalid input !
+            </p>
+            <p id="warning-1-1" class="text-red-600 mb-4 hidden">
+              You don't have enough money !
+            </p>
+            <button id="flood-donation-btn"
+              class="block w-full bg-[#B4F461] px-6 py-4 font-bold rounded-lg sm:text-xl ">
               Donate Now
             </button>
           </div>
@@ -79,7 +91,7 @@
           <div>
             <h3 class="mt-8 mb-4">
               <span class="bg-gray-100  py-2 px-5 rounded font-bold text-gray-600 ">
-                600 BDT
+                <span id="relief-amount">600</span> BDT
               </span>
             </h3>
             <h3 class="font-bold pb-4">
@@ -92,8 +104,16 @@
               aftermath of this disaster. Every contribution counts towards making a real difference. Please consider
               donating today to assist those in urgent need.
             </p>
-            <input class="block border w-full p-4 mt-6 mb-4 rounded-lg" type="text" placeholder="Write Donation Amount">
-            <button class="block w-full bg-[#B4F461] px-6 py-4 font-bold rounded-lg sm:text-xl ">
+            <input id="relief-input-field" class="block border w-full p-4 mt-6 mb-4 rounded-lg" type="text"
+              placeholder="Write Donation Amount">
+            <p id="warning-2" class="text-red-600 mb-4 hidden">
+              invalid input !
+            </p>
+            <p id="warning-2-1" class="text-red-600 mb-4 hidden">
+              You don't have enough money !
+            </p>
+            <button id="relief-donation-btn"
+              class="block w-full bg-[#B4F461] px-6 py-4 font-bold rounded-lg sm:text-xl ">
               Donate Now
             </button>
           </div>
@@ -110,7 +130,7 @@
           <div>
             <h3 class="mt-8 mb-4">
               <span class="bg-gray-100  py-2 px-5 rounded font-bold text-gray-600 ">
-                2400 BDT
+                <span id="movement-amount">2400</span> BDT
               </span>
             </h3>
             <h3 class="font-bold pb-4">
@@ -124,8 +144,16 @@
               in their recovery. Please consider making a donation to support these brave individuals in their time of
               need.
             </p>
-            <input class="block border w-full p-4 mt-6 mb-4 rounded-lg" type="text" placeholder="Write Donation Amount">
-            <button class="block w-full bg-[#B4F461] px-6 py-4 font-bold rounded-lg sm:text-xl ">
+            <input id="movement-input-value" class="block border w-full p-4 mt-6 mb-4 rounded-lg" type="text"
+              placeholder="Write Donation Amount">
+            <p id="warning-3" class="text-red-600 mb-4 hidden">
+              invalid input !
+            </p>
+            <p id="warning-3-1" class="text-red-600 mb-4 hidden">
+              You don't have enough money !
+            </p>
+            <button id="movement-donation-btn"
+              class="block w-full bg-[#B4F461] px-6 py-4 font-bold rounded-lg sm:text-xl ">
               Donate Now
             </button>
           </div>
@@ -134,19 +162,22 @@
     </section>
 
     <!-- history section  -->
-     <section id="history-section" class="mt-8 w-[75%] mx-auto border rounded-lg hidden">
-        
-     </section>
+    <section id="history-section" class="mt-8 w-[75%] mx-auto hidden">
+
+    </section>
 
     <!-- footer -->
     <footer class=" mt-20 w-full h-36 bg-[#F9F7F3]">
 
     </footer>
   </main>
-  
+
+
 
 
   <script src="./js/index.js"></script>
+  <script src="./js/relief.js"></script>
+  <script src="./js/movement.js"></script>
 </body>
 
 </html>
